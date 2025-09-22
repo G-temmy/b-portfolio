@@ -17,17 +17,44 @@ header {
   background: linear-gradient(to right, #fff, #012d53, #000b0c);
   border-radius: 6px;
   padding: 10px;
+  display: flex;
 }
 
 .logo {
   height: 10%;
   width: 100%;
+  display: flex;
 }
 .logo-img {
   width: 100px;
   height: 100px;
   border-radius: 50%;
 }
+.logo-text {
+  text-decoration: none; /* remove underline */
+  color: #fff; /* white text (adjust as needed) */
+  font-weight: 500;
+  padding: 8px 12px;
+}
+
+.nav-list {
+  display: flex; /* puts list items in a row */
+  gap: 20px; /* spacing between items */
+  list-style: none; /* remove bullets */
+  margin: 0; /* remove default margin */
+  padding: 0; /* remove default padding */
+  position: absolute;
+  top: 8px;
+  right: 16px;
+}
+
+.nav-list li a {
+  text-decoration: none; /* remove underline */
+  color: #fff; /* white text (adjust as needed) */
+  font-weight: 500;
+  padding: 8px 12px;
+}
+
 /* Cover */
 .cover {
   position: relative;
