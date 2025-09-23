@@ -18,6 +18,9 @@ header {
   border-radius: 6px;
   padding: 10px;
   display: flex;
+  position: sticky; /* stays visible */
+  top: 0; /* sticks to the top */
+  z-index: 1000; /* stays above other content */
 }
 
 .logo {
@@ -32,8 +35,9 @@ header {
 }
 .logo-text {
   text-decoration: none; /* remove underline */
-  color: #fff; /* white text (adjust as needed) */
+  color: #190341; /* dark text (adjust as needed) */
   font-weight: 500;
+  font-size: 30px;
   padding: 8px 12px;
 }
 
@@ -53,6 +57,7 @@ header {
   color: #fff; /* white text (adjust as needed) */
   font-weight: 500;
   padding: 8px 12px;
+  border: 2px solid #080808;
 }
 
 /* Cover */
@@ -129,17 +134,30 @@ header {
 
 /* Main Content */
 .main {
-  flex: 1;
-  padding: 20px;
+  background: #012d53; /* white background */
+  padding: 30px; /* space inside the box */
+  margin: 20px auto; /* space outside the box */
+  border: 1px solid #ddd; /* light border */
+  border-radius: 10px; /* rounded corners */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* soft shadow */
+  max-width: 900px; /* keeps it centered and not too wide */
 }
 
 .main h2 {
-  margin: 20px 0 10px;
-  color: #0b5fa4;
+  text-align: center;
+  color: #fff;
+  margin-bottom: 20px;
 }
 
 .main h3 {
-  margin: 10px 0 5px;
+  margin-top: 20px;
+  color: #fff;
+}
+
+.main p {
+  margin-bottom: 15px;
+  line-height: 1.7;
+  color: #333;
 }
 
 .chart img {
@@ -170,4 +188,122 @@ header {
   width: 100px;
   height: 100px;
   background: #eee;
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+  header {
+    border: 2px solid #fff;
+    background: linear-gradient(to right, #fff, #012d53, #000b0c);
+    border-radius: 6px;
+    padding: 10px;
+    display: flex;
+    position: sticky; /* stays visible */
+    top: 0; /* sticks to the top */
+    z-index: 1000; /* stays above other content */
+  }
+
+  .logo {
+    justify-content: center;
+    margin-bottom: 10px;
+  }
+
+  .logo-text {
+    font-size: 22px;
+  }
+
+  nav-list {
+    display: flex; /* puts list items in a row */
+    gap: 20px; /* spacing between items */
+    list-style: none; /* remove bullets */
+    margin: 0; /* remove default margin */
+    padding: 0; /* remove default padding */
+    position: absolute;
+    top: 8px;
+    right: 16px;
+  }
+
+  .nav-list li a {
+    display: block;
+    width: 100%;
+    text-align: center;
+  }
+
+  .cover {
+    height: auto;
+    text-align: center;
+    padding: 40px 10px;
+  }
+
+  .cover .overlay {
+    position: static;
+  }
+
+  .cover h1 {
+    font-size: 28px;
+  }
+
+  .cover h3 {
+    font-size: 18px;
+  }
+
+  .cover p {
+    font-size: 16px;
+  }
+
+  .city-img {
+    position: relative;
+    width: 100%;
+  }
+
+  .content {
+    flex-direction: column;
+  }
+
+  .sidebar {
+    width: 100%;
+    border-right: none;
+    border-bottom: 2px solid #eee;
+  }
+
+  .main {
+    width: 100%;
+  }
+
+  .team {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .member img {
+    width: 80px;
+    height: 80px;
+  }
+
+  #qrcode {
+    margin: 20px auto;
+    display: block;
+  }
+}
+
+@media (max-width: 480px) {
+  .logo-text {
+    font-size: 18px;
+  }
+
+  .cover h1 {
+    font-size: 22px;
+  }
+
+  .cover h3 {
+    font-size: 16px;
+  }
+
+  .cover p {
+    font-size: 14px;
+  }
+
+  .nav-list {
+    gap: 5px;
+  }
 }
