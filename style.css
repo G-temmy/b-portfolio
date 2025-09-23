@@ -134,24 +134,20 @@ header {
 
 /* Main Content */
 .main {
-  background: #012d53; /* white background */
+  background: #fff; /* white background */
   padding: 30px; /* space inside the box */
   margin: 20px auto; /* space outside the box */
   border: 1px solid #ddd; /* light border */
   border-radius: 10px; /* rounded corners */
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* soft shadow */
   max-width: 900px; /* keeps it centered and not too wide */
+  color: #333;
 }
 
 .main h2 {
   text-align: center;
-  color: #fff;
+  color: #333;
   margin-bottom: 20px;
-}
-
-.main h3 {
-  margin-top: 20px;
-  color: #fff;
 }
 
 .main p {
